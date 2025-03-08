@@ -30,6 +30,7 @@ const gainNode = computed(() => {
 let oscs: OscillatorNode[] = []
 
 const onPressed = () => {
+  audioContext.resume()
   oscs = props.frequencies.map((freq) => {
     const osc = audioContext.createOscillator()
     osc.setPeriodicWave(audioContext.createPeriodicWave([0, 1], [0, 0]))
@@ -38,7 +39,7 @@ const onPressed = () => {
     return osc
   })
   oscs.forEach((osc) => {
-    osc.start()
+    osc.start(0)
   })
 }
 

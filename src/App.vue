@@ -76,5 +76,8 @@ const computedGain = computed(() => gain.value / 100.0)
       :gain="computedGain"
       :number="k.key"
     ></dial-button>
+    <div class="col-start-1 col-end-4 mt-4 rounded-lg bg-orange-200 p-4">
+      For iOS devices, make sure you either use headphones or turn off silent mode.
+    </div>
   </main>
 </template>
