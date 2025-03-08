@@ -51,10 +51,12 @@ const onReleased = () => {
 
 <template>
   <button
-    class="aspect-square rounded-full bg-orange-400 p-2 text-6xl transition-all hover:cursor-pointer hover:brightness-95 active:brightness-90"
+    class="aspect-square rounded-full bg-orange-400 p-2 text-3xl transition-all hover:cursor-pointer hover:brightness-95 active:brightness-90 lg:text-6xl"
     type="button"
     @mousedown="onPressed"
     @mouseup="onReleased"
+    @touchend="onReleased"
+    @touchstart="onPressed"
   >
     <span>{{ props.number }}</span>
   </button>
